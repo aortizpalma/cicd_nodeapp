@@ -2,7 +2,7 @@
 
 - ran `npm init -y`
 - ran `npm i express`
-- created app.js file and defined server code:
+- created **app.js** file and defined server code:
 ```javascript
 const express = require('express')
 const app = express()
@@ -23,7 +23,7 @@ app.listen(500, () => {
 - cleaned up React boilerplate files (e.g. _App.js_)
 - switched to the frontend folder and ran `npm i axios`
 
-- Added the following code to the frontend App.js file:
+- Added the following code to the frontend **App.js** file:
 ```javascript
 import React, { useState, useEffect } from 'react';
 import './App.css';
@@ -51,14 +51,14 @@ function App() {
 export default App;
 ```
 
-- Added the following to package.json:
+- Added the following at the end of the **package.json** file (_** the brackets and commas are just illustrative_):
 ```json
   },
   "proxy": "http://localhost:5000"
 }
 ```
 
-- Added the following script to package.json
+- Added the following to the **scripts** section of the **package.json** file (_** the brackets and commas are just illustrative_):
 ```json
    "start": "node app.js"
   },
