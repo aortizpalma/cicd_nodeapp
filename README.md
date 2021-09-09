@@ -67,3 +67,31 @@ export default App;
 - In the project's root folder ran `node app.js` to start the backend server
 
 - In the 'fontend' folder ran `npm start` to preview the React frontend app.
+
+- created `.github` folder and inside a `workflows` folder.
+- created a nodeapp.yml file inside `workflows` and added the following code:
+```yaml
+name: Nodeapp CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+        node-version: ${{ matrix.node-version }}
+      - run: |
+          npm i
+          cd frontend
+          npm i
+          npm run build
+```
