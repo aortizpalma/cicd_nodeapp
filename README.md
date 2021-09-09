@@ -72,27 +72,27 @@ export default App;
 - created a nodeapp.yml file inside `workflows` and added the following code:
 ```yaml
 name: Nodeapp CI
-
 on:
   push:
     branches: [master]
   pull_request:
     branches: [master]
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version}}
         uses: actions/setup-node@v1
         with:
-            node-version: ${{ matrix.node-version }}
+          node-version: ${{ matrix.node-version}}
       - run: |
           npm i
           cd frontend
           npm i
           npm run build
 ```
+- Added workflow status badge here, to README file:
+[![Nodeapp CI](https://github.com/aortizpalma/cicd_nodeapp/actions/workflows/nodeapp.yml/badge.svg)](https://github.com/aortizpalma/cicd_nodeapp/actions/workflows/nodeapp.yml)
+
 
