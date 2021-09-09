@@ -51,7 +51,7 @@ function App() {
 export default App;
 ```
 
-- Added the following at the end of the **package.json** file (_** the brackets and commas are just illustrative_):
+- Added the following at the end of the **package.json** file of the (_** the brackets and commas are just illustrative_):
 ```json
   },
   "proxy": "http://localhost:5000"
