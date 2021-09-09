@@ -51,15 +51,19 @@ function App() {
 export default App;
 ```
 
-- Add the following to package.json:
+- Added the following to package.json:
 ```json
   },
   "proxy": "http://localhost:5000"
 }
 ```
 
-- Add the following script to package.json
+- Added the following script to package.json
 ```json
    "start": "node app.js"
   },
 ```
+
+- In the project's root folder ran `node app.js` to start the backend server
+
+- In the 'fontend' folder ran `npm start` to preview the React frontend app.
